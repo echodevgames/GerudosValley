@@ -1,142 +1,39 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#14191b">
+  <meta name="theme-color" content="#0b0b1e">
   <title>Gerudos Valley | Horde PvP Guild</title>
-
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #101517;
-      --panel: #1b2425;
-      --ink: #f3eee2;
-      --muted: #b9c4bd;
-      --accent: #e8b86e;
-      --border: #384440;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: radial-gradient(circle at 50% -20%, #344b43 0, transparent 52%), var(--bg);
-      font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif;
-      color: var(--ink);
-    }
-
-    main {
-      max-width: 850px;
-      margin: auto;
-      padding: 3.5rem 1.2rem 5rem;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: .79rem;
-      letter-spacing: .19em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: clamp(2.9rem, 9vw, 5.6rem);
-      line-height: 1;
-      margin: .7rem 0;
-    }
-
-    h2 {
-      font-size: 1.45rem;
-      margin: 0 0 .8rem;
-    }
-
-    p {
-      margin: .6rem 0 1.1rem;
-    }
-
-    .lead {
-      font-size: 1.2rem;
-      max-width: 42rem;
-    }
-
-    .muted,
-    small {
-      color: var(--muted);
-    }
-
-    .cta {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--accent);
-      color: #17201b;
-      padding: .8rem 1.35rem;
-      border-radius: .45rem;
-      font-weight: 800;
-      margin-top: 1rem;
-    }
-
-    .cta:hover {
-      filter: brightness(1.08);
-    }
-
-    section {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(27, 36, 37, .85);
-      padding: 1.45rem;
-      margin-top: 1.35rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-      margin-bottom: 0;
-    }
-
-    li {
-      margin: .35rem 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-
-    .chip {
-      display: inline-block;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: .2rem .65rem;
-      font-size: .84rem;
-      color: var(--muted);
-      margin-right: .25rem;
-    }
-
-    footer {
-      color: var(--muted);
-      padding-top: 2rem;
-      font-size: .85rem;
-    }
-
-    .warning {
-      color: #f0d49f;
-    }
-
-    a {
-      color: var(--accent);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <main>
-    <!-- Hero / Guild introduction -->
+  <main id="top">
+
+    <!-- =========================================
+         HERO / GUILD INTRODUCTION
+         ========================================= -->
+
     <header>
-      <div class="eyebrow">World of Warcraft Forever · Horde · PvP community</div>
-      <h1>Gerudos<br>Valley</h1>
+      <div class="eyebrow">
+        World of Warcraft Forever · Horde · PvP Community
+      </div>
+
+      <div class="guild-banner">
+        <img
+          src="Images/gerudos-valley-nine-classes.jpg"
+          alt="Gerudos Valley guild banner with nine Horde class heroes"
+          class="banner-image"
+          onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+        >
+
+        <div class="banner-placeholder" hidden>
+          <span class="banner-title">Gerudos Valley</span>
+          <span class="banner-subtitle">Hold the valley. Stand together. For the Horde!</span>
+        </div>
+      </div>
 
       <p class="lead">
         A welcoming Horde home with teeth. World PvP, coordinated battlegrounds,
@@ -152,134 +49,445 @@
 
       <p><strong>Hold the valley. Stand together. For the Horde!</strong></p>
 
-      <span class="chip">PvP-first</span>
-      <span class="chip">Raid progression</span>
-      <span class="chip">Casuals welcome</span>
-
-      <!-- IMPORTANT: Replace this placeholder URL before publishing a Discord invite. -->
-      <p>
-        <a class="cta" href="DISCORD_INVITE_URL_HERE" rel="noopener noreferrer">
-          Join our Discord
-        </a>
-      </p>
-    </header>
-
-    <!-- Guild philosophy -->
-    <section>
-      <h2>Our promise</h2>
-
-      <p>
-        <strong>Anyone can belong. Commitment is optional. Reliability matters when you sign up.</strong>
-      </p>
-
-      <p>
-        No minimum playtime, mandatory raids, or pressure to maintain rank just to stay in the guild.
-        Our organized teams have their own signup and preparation expectations.
-        If you're confirmed for an event, others are counting on you.
-      </p>
-    </section>
-
-    <!-- Intended weekly schedule -->
-    <section>
-      <h2>The weekly rhythm <small>· tentative</small></h2>
-
-      <div class="grid">
-        <div>
-          <strong>Weekday PvP</strong>
-          <p class="muted">
-            Rank-progress groups and, as we grow, tactical battleground premades.
-          </p>
-        </div>
-
-        <div>
-          <strong>Wednesday</strong>
-          <p class="muted">No official guild events. Rest day.</p>
-        </div>
-
-        <div>
-          <strong>Friday</strong>
-          <p class="muted">
-            Focused core progression. Leveling and dungeons while the roster forms.
-          </p>
-        </div>
-
-        <div>
-          <strong>Saturday</strong>
-          <p class="muted">
-            Horde War Night. Accessible world PvP and good company.
-          </p>
-        </div>
-
-        <div>
-          <strong>Sunday</strong>
-          <p class="muted">
-            Optional open, alternate, or pickup raid activities where lockouts permit.
-          </p>
-        </div>
+      <div>
+        <span class="chip">PvP-first</span>
+        <span class="chip">Raid progression</span>
+        <span class="chip">Casuals welcome</span>
       </div>
 
       <p>
-        <small>Exact event times live in the in-game calendar. Discord has the conversation.</small>
+        <span class="cta disabled">Discord Coming Soon</span>
       </p>
+    </header>
+
+    <!-- =========================================
+         OUR PROMISE
+         ========================================= -->
+
+    <section id="promise">
+      <h2>Our Promise</h2>
+
+      <p>
+        <strong>
+          The gates of Gerudos Valley stand open to all who answer the call of the Horde.
+        </strong>
+      </p>
+
+      <p>
+        Whether you're a seasoned warrior, an aspiring champion, or a wandering adventurer
+        seeking a place to call home, there is a place for you within our walls.
+      </p>
+
+      <p>
+        We ask for no minimum playtime, no mandatory battles, and no endless grind to earn
+        your place among us. But when you pledge yourself to a raid or warband, your fellow
+        warriors are counting on you.
+        <strong>Commitment is a choice. Honor that choice.</strong>
+      </p>
+
+      <h2>🏰 Rally at the Gates: Join Our Discord!</h2>
+
+      <p>
+        Our Discord is the heart of Gerudos Valley. Meet your future guildmates, follow our plans,
+        help shape our community, and prepare for the battles ahead.
+      </p>
+
+      <p>
+        Whether you're ready to fight or simply want a place to belong, your journey begins there.
+      </p>
+
+      <p>
+        <a class="cta secondary" href="#openings">Contact Our Founder</a>
+      </p>
+
+      <h2>⚔️ Founding Officers Wanted!</h2>
+
+      <p>
+        <strong>
+          Gerudos Valley is raising its banners, and we need dependable leaders to help build its foundations!
+        </strong>
+      </p>
+
+      <p>
+        We are actively seeking founding officers, organizers, and community leaders to help guide our growing warband.
+      </p>
+
+      <p>
+        We're looking for help with PvP coordination, raid progression, recruitment, and community management.
+        Experience is welcome, but initiative, reliability, and a willingness to help others matter more than titles.
+      </p>
+
+      <p>
+        <a class="cta" href="#openings">View Open Positions</a>
+      </p>
+
+      <p><strong>Hold the valley. Stand together. For the Horde!</strong></p>
     </section>
 
-    <!-- Editable volunteer staff openings -->
-    <section id="openings">
-      <h2>Help build the guild</h2>
+    <!-- =========================================
+         WEEKLY OPERATIONS
+         ========================================= -->
+
+    <section id="schedule">
+      <h2>Weekly Operations <small>· Tentative</small></h2>
 
       <p class="muted">
-        These are <strong>volunteer staff and organizing roles</strong>, not character classes.
-        This section is intentionally easy to update.
+        From the battlegrounds to the raid halls, there's always something happening in the Valley.
+        Join what interests you. Only confirmed team commitments carry attendance expectations.
       </p>
 
-      <!-- EDIT OPENINGS BELOW: change labels and status manually. -->
-      <ul>
-        <li>
-          <strong>PvP Coordinator</strong> ·
-          <span class="warning">Seeking interest</span> ·
-          Organize premades and PvP nights.
-        </li>
-        <li>
-          <strong>Raid Coordinator</strong> ·
-          <span class="warning">Seeking interest</span> ·
-          Help shape Friday progression and Sunday open opportunities.
-        </li>
-        <li>
-          <strong>Recruitment &amp; Welcome</strong> ·
-          <span class="warning">Seeking interest</span> ·
-          Greet newcomers and connect players to groups.
-        </li>
-        <li>
-          <strong>Community / Discord Steward</strong> ·
-          <span class="warning">Seeking interest</span> ·
-          Keep information clear and help host events.
-        </li>
-      </ul>
+      <div class="weekly-schedule">
+        <div class="schedule-row">
+          <div class="schedule-day">MON</div>
+          <div class="schedule-details">
+            <strong>Rank Maintenance</strong>
+            <p>Optional PvP groups helping members work toward weekly rank goals.</p>
+          </div>
+          <span class="schedule-tag pvp">PvP</span>
+        </div>
 
-      <p>
-        <small>Interested? Introduce yourself in Discord. Openings and availability may change.</small>
+        <div class="schedule-row">
+          <div class="schedule-day">TUE</div>
+          <div class="schedule-details">
+            <strong>Battleground Command</strong>
+            <p>Premade battlegrounds, teamwork, and coordinated tactics.</p>
+          </div>
+          <span class="schedule-tag pvp">PvP</span>
+        </div>
+
+        <div class="schedule-row rest-day">
+          <div class="schedule-day">WED</div>
+          <div class="schedule-details">
+            <strong>Rest Day</strong>
+            <p>No official guild events. Enjoy Azeroth at your own pace.</p>
+          </div>
+          <span class="schedule-tag rest">Rest</span>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-day">THU</div>
+          <div class="schedule-details">
+            <strong>Preparation &amp; Leveling</strong>
+            <p>Informal dungeons, gearing, leveling, and raid preparation.</p>
+          </div>
+          <span class="schedule-tag open">Open</span>
+        </div>
+
+        <div class="schedule-row featured-raid">
+          <div class="schedule-day">FRI</div>
+          <div class="schedule-details">
+            <strong>Core Raid Progression</strong>
+            <p>Our focused progression night. Leveling and dungeons while the core forms.</p>
+          </div>
+          <span class="schedule-tag raid">Raid</span>
+        </div>
+
+        <div class="schedule-row featured-pvp">
+          <div class="schedule-day">SAT</div>
+          <div class="schedule-details">
+            <strong>Horde War Night</strong>
+            <p>Our flagship world PvP event. Bring the war to the Alliance!</p>
+          </div>
+          <span class="schedule-tag pvp">PvP</span>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-day">SUN</div>
+          <div class="schedule-details">
+            <strong>Open / Makeup Raid</strong>
+            <p>Optional pickup raids, alternate groups, and other content as lockouts allow.</p>
+          </div>
+          <span class="schedule-tag raid">Raid</span>
+        </div>
+      </div>
+
+      <p class="schedule-note">
+        All events are provisional as our roster grows. Exact times, signups, and updates are maintained
+        in the in-game calendar.
       </p>
     </section>
 
-    <!-- Future ideas, not launch commitments -->
-    <section>
-      <h2>What comes later?</h2>
+    <!-- =========================================
+         NINE PLAYABLE CLASS GALLERY
+         ========================================= -->
+
+    <section id="classes">
+      <div class="eyebrow">Many Paths, One Valley</div>
+      <h2>Every Kind of Champion Belongs</h2>
+
+      <p class="muted">
+        From frontline warriors to quiet wanderers, there's room in the Valley for every playstyle.
+        These class portraits celebrate our community, not required raid classes or officer qualifications.
+      </p>
+
+      <div class="class-grid">
+        <figure class="class-card"><img src="Images/Classes/warrior.jpg" alt="Warrior class character" loading="lazy"><figcaption>Warrior</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/hunter.jpg" alt="Hunter class character" loading="lazy"><figcaption>Hunter</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/mage.jpg" alt="Mage class character" loading="lazy"><figcaption>Mage</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/rogue.jpg" alt="Rogue class character" loading="lazy"><figcaption>Rogue</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/priest.jpg" alt="Priest class character" loading="lazy"><figcaption>Priest</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/warlock.jpg" alt="Warlock class character" loading="lazy"><figcaption>Warlock</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/paladin.jpg" alt="Paladin class character" loading="lazy"><figcaption>Paladin</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/druid.jpg" alt="Druid class character" loading="lazy"><figcaption>Druid</figcaption></figure>
+        <figure class="class-card"><img src="Images/Classes/shaman.jpg" alt="Shaman class character" loading="lazy"><figcaption>Shaman</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- =========================================
+         FOUNDING LEADERSHIP
+         ========================================= -->
+
+    <section id="openings">
+      <div class="eyebrow">The Valley Calls</div>
+      <h2>Founding Officers Wanted!</h2>
+
+      <p><strong>Every great stronghold begins with those willing to raise its banners.</strong></p>
+
       <p>
-        Guild events, friendly competitions, occasional free-entry giveaways after rules review,
-        and perhaps more online tools if the community actually needs them.
-        For now, we're keeping it simple and getting the company together.
+        We're building Gerudos Valley from the ground up, and <strong>every founding leadership position below is open</strong>.
+        Help make this a formidable PvP warband, a dependable progression team, and a home for Horde players of all schedules.
+      </p>
+
+      <p class="muted">
+        These are volunteer organizing roles, not class requirements or guaranteed in-game permissions.
+        Initiative, good judgment, and kindness matter more than titles. The rank names are our proposed guild flavor.
+      </p>
+
+      <div class="officer-grid">
+        <article class="officer-card">
+          <div class="officer-art">
+            <img src="Images/Ranks/warlord.jpg" alt="Warlord leadership artwork" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <div class="officer-art-placeholder" hidden><strong>Warlord</strong><small>Artwork unavailable</small></div>
+          </div>
+          <div class="officer-content">
+            <div class="officer-heading"><h3>Warlord</h3><span class="open-status">OPEN</span></div>
+            <small>PvP Commander</small>
+            <p class="muted">Rally the warbands. Organize battleground premades, support PvP rank goals, and lead our weekly operations.</p>
+          </div>
+        </article>
+
+        <article class="officer-card">
+          <div class="officer-art">
+            <img src="Images/Ranks/siege-marshal.jpg" alt="Siege Marshal leadership artwork" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <div class="officer-art-placeholder" hidden><strong>Siege Marshal</strong><small>Artwork unavailable</small></div>
+          </div>
+          <div class="officer-content">
+            <div class="officer-heading"><h3>Siege Marshal</h3><span class="open-status">OPEN</span></div>
+            <small>Raid Coordinator</small>
+            <p class="muted">Forge the progression core. Help coordinate raid preparation, Friday rosters, and accessible Sunday opportunities.</p>
+          </div>
+        </article>
+
+        <article class="officer-card">
+          <div class="officer-art">
+            <img src="Images/Ranks/gatekeeper.jpg" alt="Gatekeeper leadership artwork" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <div class="officer-art-placeholder" hidden><strong>Gatekeeper</strong><small>Artwork unavailable</small></div>
+          </div>
+          <div class="officer-content">
+            <div class="officer-heading"><h3>Gatekeeper</h3><span class="open-status">OPEN</span></div>
+            <small>Recruitment &amp; Welcome</small>
+            <p class="muted">Keep the gates open. Greet recruits, introduce guildmates, and help every traveler find their place.</p>
+          </div>
+        </article>
+
+        <article class="officer-card">
+          <div class="officer-art">
+            <img src="Images/Ranks/hearthkeeper.jpg" alt="Hearthkeeper leadership artwork" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <div class="officer-art-placeholder" hidden><strong>Hearthkeeper</strong><small>Artwork unavailable</small></div>
+          </div>
+          <div class="officer-content">
+            <div class="officer-heading"><h3>Hearthkeeper</h3><span class="open-status">OPEN</span></div>
+            <small>Community &amp; Discord</small>
+            <p class="muted">Keep the hearth burning. Support community spaces, social events, and players of every activity level.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="contact-panel">
+        <h3>Answer the Call</h3>
+        <p>
+          Interested in helping lead the Valley? No lengthy application needed.
+          Tell us which role catches your eye and what you'd like to help build.
+        </p>
+        <p>
+          <strong>Reach Nicolaarudda in-game:</strong>
+          Send a whisper or in-game mail to <span class="contact-name">Nicolaarudda</span> on WoW Forever.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================
+         GENERAL MEMBERS / ADDITIONAL RANK CONCEPTS
+         ========================================= -->
+
+    <section id="members">
+      <div class="eyebrow">The Heart of the Valley</div>
+      <h2>The People of Gerudos Valley</h2>
+
+      <p><strong>Not every hero wears a crown, commands an army, or marches into battle every night.</strong></p>
+
+      <p>
+        Some guard our walls. Some gather supplies. Others explore distant lands, lend a helping hand,
+        or simply enjoy the warmth of good company. Every one of them makes the Valley stronger.
+      </p>
+
+      <p class="muted">
+        These are our proposed guild titles and community responsibilities. They represent different ways
+        to contribute, not requirements for membership. No one needs to earn a special rank to belong.
+      </p>
+
+      <div class="member-grid">
+        <article class="member-card">
+          <img src="Images/Ranks/valley-warden.jpg" alt="Valley Warden guild rank artwork" loading="lazy">
+          <div class="member-content">
+            <span class="member-type">Founding Leadership</span>
+            <h3>Valley Warden</h3>
+            <p>Guardian of the Valley and keeper of its founding vision. Responsible for guiding the guild, supporting its officers, and keeping the community true to its promises.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="Images/Ranks/sentinel.jpg" alt="Sentinel guild rank artwork" loading="lazy">
+          <div class="member-content">
+            <span class="member-type">Community Support</span>
+            <h3>Sentinel</h3>
+            <p>Watchful guardians of the community. Sentinels help resolve concerns, guide new members, and keep the Valley welcoming and respectful.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="Images/Ranks/quartermaster.jpg" alt="Quartermaster guild rank artwork" loading="lazy">
+          <div class="member-content">
+            <span class="member-type">Resources &amp; Logistics</span>
+            <h3>Quartermaster</h3>
+            <p>Every army needs supplies. Quartermasters help organize guild resources, coordinate donations, and support warriors preparing for their next adventure.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="Images/Ranks/pathfinder.jpg" alt="Pathfinder guild rank artwork" loading="lazy">
+          <div class="member-content">
+            <span class="member-type">Exploration &amp; Activities</span>
+            <h3>Pathfinder</h3>
+            <p>The adventurous spirits of the Valley. Pathfinders lead dungeon groups, organize spontaneous adventures, and help guildmates discover everything Azeroth has to offer.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="Images/Ranks/wayfarer.jpg" alt="Wayfarer guild rank artwork" loading="lazy">
+          <div class="member-content">
+            <span class="member-type">General Membership</span>
+            <h3>Wayfarer</h3>
+            <p>The heart of Gerudos Valley. Adventurers, casual players, leveling heroes, returning veterans, and anyone seeking good company beneath our banners.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="member-note">
+        <h3>A Place for Every Adventurer</h3>
+        <p>You don't need to raid, PvP, lead events, or maintain a particular schedule to call Gerudos Valley your home.</p>
+        <p>Join when you can. Fight when you wish. Help when you're able. When you make a commitment, honor it.</p>
+        <p><strong>The gates remain open. Hold the valley. Stand together. For the Horde!</strong></p>
+      </div>
+    </section>
+
+    <!-- =========================================
+         RAIDING VISION / ONYXIA IMAGE SLOT
+         ========================================= -->
+
+    <section id="raiding">
+      <div class="eyebrow">Toward the Dragon's Lair</div>
+      <h2>We Intend to Raid as Far as We're Allowed</h2>
+
+      <p>
+        <strong>
+          Gerudos Valley is not only a PvP guild. We also intend to build a serious raid core and push progression
+          through every stage of endgame content available to us on WoW Forever.
+        </strong>
+      </p>
+
+      <p>
+        That means showing up prepared, growing a dependable core, and continuing our march through the content
+        our server allows. Friday remains our focused progression night, while Sunday gives us room for open runs,
+        makeups, alternates, and building experience across the roster.
+      </p>
+
+      <p class="muted">
+        This section also reserves a place for one final piece of guild artwork:
+        an overhead scene of our raid force assembling before the battle with Onyxia,
+        rendered in the same established pixel-art style.
+      </p>
+
+
+    <div class="feature-image-panel">
+      <img
+        src="Images/Horde Raid Against Onyxia.png"
+        alt="Overhead artwork of a Horde raid preparing to battle Onyxia"
+        class="feature-image"
+        onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+      >
+
+      <div class="feature-placeholder" hidden>
+        <strong>Raid Artwork Unavailable</strong>
+        <small>Our warriors are preparing for Onyxia!</small>
+      </div>
+    </div>
+
+
+    </section>
+
+    <!-- =========================================
+         FUTURE PLANS
+         ========================================= -->
+
+    <section id="future">
+      <div class="eyebrow">Beyond the First Battle</div>
+      <h2>What Lies Ahead?</h2>
+
+      <p>
+        First we raise the banners, gather our people, and make our weekly operations dependable.
+        As the Valley grows, so will the opportunities to celebrate, compete, and build something together.
+      </p>
+
+      <div class="future-grid">
+        <div class="future-item">
+          <h3>Guild Gatherings</h3>
+          <p>Friendly contests, newcomer nights, community challenges, and memorable Horde adventures.</p>
+        </div>
+
+        <div class="future-item">
+          <h3>Prizes &amp; Giveaways</h3>
+          <p>Potential free-entry guild giveaways with transparent rules, subject to policy review before launch.</p>
+        </div>
+
+        <div class="future-item">
+          <h3>A Growing Stronghold</h3>
+          <p>Guild news, achievements, and perhaps simple portal tools if our community actually needs them.</p>
+        </div>
+      </div>
+
+      <p class="muted">
+        <small>
+          These are future ambitions, not scheduled events or promised services.
+          The in-game calendar remains our official schedule.
+        </small>
       </p>
     </section>
 
-    <!-- Attribution and pre-launch reminders -->
+    <!-- =========================================
+         FOOTER / COMMUNITY DISCLAIMER
+         ========================================= -->
+
     <footer>
-      Gerudos Valley is an independent fan-run guild community inspired in part by the
-      Gerudo Valley setting from The Legend of Zelda: Ocarina of Time.
-      It is not affiliated with Nintendo or Blizzard Entertainment.
-      The theme is optional; no roleplay is required.
-      <strong>Before publishing:</strong> set the Discord invite, verify the primary
-      realm/ruleset, and update openings. © Gerudos Valley community.
+      <p>
+        Gerudos Valley is an independent fan-run guild community inspired in part by the Gerudo Valley setting
+        from The Legend of Zelda: Ocarina of Time. It is not affiliated with Nintendo or Blizzard Entertainment.
+        The theme is optional; no roleplay is required.
+      </p>
+
+      <p>&copy; Gerudos Valley community.</p>
     </footer>
+
   </main>
 </body>
 </html>

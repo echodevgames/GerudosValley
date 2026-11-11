@@ -1,0 +1,658 @@
+/* =========================================
+   GERUDOS VALLEY | WEBSITE V0.8
+   EchoTech-inspired cyan and purple theme
+   ========================================= */
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0b1e;
+  --panel: #17132c;
+  --panel-dark: #101124;
+  --ink: #f4f1ff;
+  --muted: #b9b5d4;
+  --accent: #58e5ff;
+  --violet: #a982ff;
+  --border: #49406c;
+  --glow: rgba(88, 229, 255, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(111, 53, 182, 0.3), transparent 48%),
+    radial-gradient(circle at 100% 45%, rgba(30, 81, 145, 0.13), transparent 40%),
+    var(--bg);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+}
+
+main {
+  max-width: 950px;
+  margin: auto;
+  padding: 3.5rem 1.2rem 5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.85rem;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+p {
+  margin: 0.6rem 0 1.1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.12rem 0.35rem;
+  border-radius: 4px;
+}
+
+.muted,
+small {
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 1.2rem;
+  max-width: 46rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.79rem;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+section {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(27, 23, 49, 0.94), rgba(15, 18, 35, 0.96));
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
+}
+
+section:target {
+  border-color: var(--accent);
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--accent), #91b7ff);
+  color: #0a1024;
+  padding: 0.8rem 1.35rem;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-top: 0.7rem;
+  box-shadow: 0 4px 18px var(--glow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(88, 229, 255, 0.3);
+}
+
+a.cta:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+}
+
+.cta.secondary {
+  background: rgba(169, 130, 255, 0.12);
+  color: var(--ink);
+  border: 1px solid var(--violet);
+  box-shadow: none;
+}
+
+.cta.disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.chip {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+  background: rgba(169, 130, 255, 0.06);
+  margin: 0.15rem 0.25rem 0.15rem 0;
+}
+
+.guild-banner {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(109, 69, 185, 0.18), 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.banner-placeholder,
+.feature-placeholder {
+  min-height: 220px;
+  padding: 2rem;
+  border: 1px dashed var(--accent);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #21173f, #0d142a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.banner-subtitle {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.weekly-schedule {
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--panel-dark);
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 55px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.schedule-row:last-child {
+  border-bottom: none;
+}
+
+.schedule-row:hover {
+  background: rgba(169, 130, 255, 0.065);
+}
+
+.schedule-day {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.schedule-details strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.schedule-details p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.schedule-tag {
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.schedule-tag.pvp {
+  color: #ffadcf;
+  background: rgba(187, 52, 133, 0.18);
+}
+
+.schedule-tag.raid {
+  color: #a9d8ff;
+  background: rgba(48, 108, 211, 0.2);
+}
+
+.schedule-tag.open {
+  color: #91e8d5;
+  background: rgba(48, 148, 152, 0.16);
+}
+
+.schedule-tag.rest {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.featured-raid {
+  background: rgba(48, 108, 211, 0.07);
+  border-left: 3px solid #619eff;
+}
+
+.featured-pvp {
+  background: rgba(169, 77, 180, 0.09);
+  border-left: 3px solid var(--violet);
+}
+
+.rest-day {
+  opacity: 0.75;
+}
+
+.schedule-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.class-grid,
+.officer-grid,
+.member-grid,
+.future-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.class-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.class-card,
+.officer-card,
+.member-card,
+.future-item {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel-dark);
+}
+
+.class-card,
+.officer-card,
+.member-card {
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.class-card:hover,
+.officer-card:hover,
+.member-card:hover {
+  transform: translateY(-3px);
+}
+
+.class-card:hover,
+.member-card:hover {
+  border-color: var(--accent);
+}
+
+.officer-card:hover {
+  border-color: var(--violet);
+}
+
+.class-card img,
+.member-card img,
+.feature-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.class-card figcaption {
+  padding: 0.55rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.officer-art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, #302153, #11162e);
+}
+
+.officer-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.officer-art-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--accent);
+  background: linear-gradient(135deg, #302153, #11162e);
+}
+
+.officer-art-placeholder strong {
+  font-size: 1.15rem;
+}
+
+.officer-art-placeholder small {
+  font-size: 0.78rem;
+}
+
+.officer-content,
+.member-content {
+  padding: 1rem;
+}
+
+.officer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.officer-heading h3,
+.member-content h3 {
+  margin: 0 0 0.3rem;
+}
+
+.officer-content p,
+.member-content p,
+.future-item p {
+  margin-bottom: 0;
+}
+
+.open-status {
+  display: inline-block;
+  border: 1px solid var(--violet);
+  border-radius: 999px;
+  padding: 0.12rem 0.65rem;
+  color: #e1c7ff;
+  background: rgba(169, 130, 255, 0.12);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.contact-panel,
+.member-note {
+  padding: 1.2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.contact-panel {
+  border-left: 3px solid var(--accent);
+  background: rgba(88, 229, 255, 0.055);
+}
+
+.member-note {
+  border-left: 3px solid var(--violet);
+  background: rgba(169, 130, 255, 0.07);
+}
+
+.contact-panel h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.contact-name {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.member-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.5rem 0;
+}
+
+.member-type {
+  display: inline-block;
+  color: var(--violet);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.feature-image-panel {
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel-dark);
+}
+
+.feature-image {
+  background: linear-gradient(135deg, #2a2150, #0f1631);
+}
+
+.future-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+  gap: 0.85rem;
+}
+
+.future-item {
+  padding: 1rem;
+}
+
+.future-item h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.future-item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+footer {
+  color: var(--muted);
+  padding-top: 2rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 620px) {
+  main {
+    padding-top: 2rem;
+  }
+
+  section {
+    padding: 1.1rem;
+  }
+
+  .officer-grid,
+  .member-grid,
+  .future-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .schedule-row {
+    grid-template-columns: 42px 1fr;
+    gap: 0.7rem;
+  }
+
+  .schedule-tag {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   GERUDOS VALLEY | OFFICER BADGES V0.9
+   Compact founding officer recruitment cards
+   ========================================= */
+
+/* Two compact cards per row on desktop */
+.officer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+/* Horizontal badge layout */
+.officer-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-width: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel-dark);
+
+  overflow: hidden;
+}
+
+/* Small artwork area on the left */
+.officer-art {
+  position: relative;
+  width: 125px;
+  min-width: 125px;
+  aspect-ratio: auto;
+  border-bottom: none;
+  border-right: 1px solid var(--border);
+}
+
+/* Crop the existing artwork into a portrait */
+.officer-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Keep fallback inside the smaller badge */
+.officer-art-placeholder {
+  position: absolute;
+  inset: 0;
+  padding: 0.5rem;
+}
+
+.officer-art-placeholder strong {
+  font-size: 0.85rem;
+}
+
+.officer-art-placeholder small {
+  font-size: 0.7rem;
+}
+
+/* Compact text area */
+.officer-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem;
+}
+
+.officer-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+}
+
+.officer-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.officer-content > small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+}
+
+.officer-content p {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.open-status {
+  font-size: 0.62rem;
+  padding: 0.1rem 0.45rem;
+}
+
+/* Stack badges on tablets and phones */
+@media (max-width: 760px) {
+  .officer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Even more compact on small phones */
+@media (max-width: 420px) {
+  .officer-art {
+    width: 95px;
+    min-width: 95px;
+  }
+
+  .officer-content {
+    padding: 0.7rem;
+  }
+
+  .officer-content p {
+    font-size: 0.76rem;
+  }
+}
